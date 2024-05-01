@@ -1,14 +1,13 @@
-FROM python:3.11.9
+FROM apache/airflow:2.3.0
 
-WORKDIR /linkedin-scrapper
+COPY dags /opt/airflow/dags
+COPY plugins /opt/airflow/plugins
+COPY airflow.cfg /opt/airflow/airflow.cfg
+
+ENV AIRFLOW_HOME=/opt/airflow
 
 RUN pip install poetry
 
-COPY pyproject.toml poetry.lock* /linkedin-scrapper/
-
-RUN poetry config virtualenvs.create false
-RUN poetry install --no-dev
-
-COPY . /linkedin-scrapper
-
-RUN poetry run python -m ipykernel install --user --name=linkedin-scrapper-env --display-name "linkedin-scrapper-env"
+COPY pyproject.toml poetry.lock* /opt/airflow/
+RUN poetry config virtualenvs.create false \
+  && poetry install --no-interaction --no-ansi

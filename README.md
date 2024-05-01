@@ -1,10 +1,10 @@
-# LinkedIn Scrapper
+# LinkedIn Scrapper [Work in Progress 🚧]
 
 
-- [LinkedIn Scrapper](#linkedin-scrapper)
-	- [Context](#context)
-	- [Files in the repository](#files-in-the-repository)
-	- [Setup instructions](#setup-instructions)
+- [LinkedIn Scrapper \[Work in Progress 🚧\]](#linkedin-scrapper-work-in-progress-)
+  - [Context](#context)
+  - [Files in the repository](#files-in-the-repository)
+  - [Setup instructions](#setup-instructions)
 
 
 ## Context
@@ -36,7 +36,7 @@ Repository structure:
 1. Clone this repository:
    `git clone my github repository`.
 
-2. Build the dev container. 
+2. Build the dev container.
 
 3. Install the required libraries by running the command: `pip install -r requirements.txt`.
 
